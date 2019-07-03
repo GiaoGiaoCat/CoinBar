@@ -18,9 +18,10 @@ func main() {
 func helloClock() {
 	for {
 		// 如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约
-		resp := ContractMarketDetailMerged("EOS_NW")
+		resp := ContractMarketDetailMerged("EOS_CQ")
 		menuet.App().SetMenuState(&menuet.MenuState{
-			Title: "Sell " + resp["ask"] + " - Buy " + resp["bid"],
+			// Title: "Sell " + resp["ask"] + " - Buy " + resp["bid"],
+			Title: "😽 " + resp["bid"],
 		})
 		time.Sleep(time.Second)
 	}
